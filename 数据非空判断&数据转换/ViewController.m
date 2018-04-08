@@ -1,0 +1,24 @@
+//
+//  ViewController.m
+//  数据非空判断&数据转换
+//
+//  Created by gjfax on 2018/4/8.
+//  Copyright © 2018年 macheng. All rights reserved.
+//
+
+#import "ViewController.h"
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+}
+
+
+
+@end
