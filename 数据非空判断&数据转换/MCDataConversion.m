@@ -168,17 +168,46 @@
 
 
 #pragma mark -  NSValue的转换：
-
+//NSValue转结构体
 + (void)testValueToRect {
-   
+    NSValue *value1 = [NSValue valueWithCGPoint:CGPointMake(0, 0)];
+    NSValue *value2 = [NSValue valueWithCGSize:CGSizeMake(30, 30)];
+    NSValue *value3 = [NSValue valueWithCGRect:CGRectMake(0, 0, 33, 11)];
+    
+    // 数据解封装
+    CGPoint point = [value1 CGPointValue];
+    CGSize  size = [value2 CGSizeValue];
+    CGRect rect = [value3 CGRectValue];
 }
+//结构体转NSValue：见上例子
 + (void)testRectToValue {
     
-}
-+ (void)testValueToDefinedRect {
     
 }
+
+//自定义结构体转NSValue
 + (void)testDefinedRectToValue {
+    // 1、结构体类型声明
+    typedef struct {
+        char name[81];
+        int  age;
+    }Person;
+    
+    // 2、声明结构体变量并初始化
+    Person person = {"Charles", 21};
+    
+    // 3、封装
+    NSValue *value = [NSValue valueWithBytes:&person objCType:@encode(Person)];
+    
+    // 4、解封装
+    Person newPerson;
+    [value getValue:&newPerson];
+    NSLog(@"<%p 姓名：%s 年龄：%d>", &newPerson, newPerson.name, newPerson.age);
+}
+
+//NSValue转自定义结构体:见上例子
++ (void)testValueToDefinedRect {
+    
     
 }
 
