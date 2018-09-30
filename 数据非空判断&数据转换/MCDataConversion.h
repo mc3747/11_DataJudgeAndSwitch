@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
 
 @interface MCDataConversion : NSObject
 
@@ -36,17 +37,17 @@
 + (void)testStringToNSNumber;
 
 #pragma mark -  NSValue转换
-+ (CGRect )valueToRect:(NSValue *)value;
-+ (NSValue *)rectToValue:(CGRect )rect;
 + (void)testValueToRect;
 + (void)testRectToValue;
 + (void)testValueToDefinedRect;
 + (void)testDefinedRectToValue;
 
-#pragma mark -  NSData转换
-
-
-
+#pragma mark -  NSData的相互转换
++ (void)testDataWithBytes;
++ (void)testDataWithString;
++ (void)testDataWithImage;
++ (void)testDataWithArray;
++ (void)testDataWithDic;
 
 
 @end
