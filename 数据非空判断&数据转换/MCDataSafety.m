@@ -47,7 +47,7 @@
 }
 /*4，返回字符串：普通网络数据安全值 */
 + (NSString *)returnNoDataString:(NSString *)noDataString withString:(NSString *)string {
-    if (string && ![MCDataJudge judgeObjectNil:string] && [string respondsToSelector:@selector(isNullStr:)]) {
+    if (string && [string isKindOfClass:[NSString class]] && ![MCDataJudge judgeObjectNil:string] && [string respondsToSelector:@selector(isNullStr:)]) {
         return string;
     } else {
         return noDataString;
@@ -56,7 +56,7 @@
 
 /*5，返回字符串：带千分位的网络数据安全值 */
 + (NSString *)returnNoDataThousandString:(NSString *)noDataThousandString withString:(NSString *)string {
-    if (string && ![MCDataJudge judgeObjectNil:string] && [string respondsToSelector:@selector(isNullStr:)]) {
+    if (string && [string isKindOfClass:[NSString class]] && ![MCDataJudge judgeObjectNil:string] && [string respondsToSelector:@selector(isNullStr:)]) {
         return ([self formatStrTo10_4WithNoDecimal:string]);
     } else {
         return noDataThousandString;
@@ -66,7 +66,7 @@
 /*6，返回字符串：拼接的网络数据安全值 */
 + (NSString *)returnJointString:(NSString *)jointString NoDataJointString:(NSString *)noDataJointString withString:(NSString *)string {
     
-    if (string && ![MCDataJudge judgeObjectNil:string] && [string respondsToSelector:@selector(isNullStr:)]) {
+    if (string && [string isKindOfClass:[NSString class]] && ![MCDataJudge judgeObjectNil:string] && [string respondsToSelector:@selector(isNullStr:)]) {
         return jointString;
     } else {
         return noDataJointString;
