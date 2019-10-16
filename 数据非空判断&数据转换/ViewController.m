@@ -72,6 +72,18 @@
 //}
 
 #pragma mark -  6，判断后台返回的模型的某个字段是否为空
+//在字典转模型中，直接替换
+//- (id)mj_newValueFromOldValue:(id)oldValue property:(MJProperty *)property{
+//
+//if (!oldValue||[oldValue isKindOfClass:[NSNull class]]) {
+//
+//return @"";
+//
+//}
+//
+//return oldValue;
+//
+//}
 
 #pragma mark -  7，返回安全的对象，数组，字典，安全的数值，拼接值，千分位值
 
