@@ -31,8 +31,17 @@
             id obj = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
             NSLog(@"返回数据：%@", obj);
             NSDictionary *dict = obj[@"weatherinfo"];
-// 测试不存在的字段
-            NSLog(@"%@---%@", dict, dict[@"uncity"]);
+            [dict setValue:[NSNull null] forKey:@"test"];
+            NSDictionary *dic1 = nil;
+// 测试不存在的对象，会崩溃
+//             NSLog(@"测试不存在的字段:%@", dic1[@"uncity"]);
+            
+// 测试不存在的字段，不会崩溃
+            NSLog(@"测试不存在的字段:%@", dict[@"uncity"]);
+           
+// 测试字段未赋值，或者服务端赋值为null的字段，会崩溃
+//            NSLog(@"测试字段未赋值:%@", dict[@"test"]);
+            
             
             if(dict[@"uncity"] == nil){
                 NSLog(@"为nil");

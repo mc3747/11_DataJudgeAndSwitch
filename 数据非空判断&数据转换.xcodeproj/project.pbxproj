@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		426ED51223585A8F000ED05B /* NoEmptyTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED50F23585A8E000ED05B /* NoEmptyTools.m */; };
+		426ED51323585A8F000ED05B /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED51023585A8E000ED05B /* NullSafe.m */; };
 		42E533902079A966001F714D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E5338F2079A966001F714D /* AppDelegate.m */; };
 		42E533932079A966001F714D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E533922079A966001F714D /* ViewController.m */; };
 		42E533962079A966001F714D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E533942079A966001F714D /* Main.storyboard */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		426ED50F23585A8E000ED05B /* NoEmptyTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoEmptyTools.m; sourceTree = "<group>"; };
+		426ED51023585A8E000ED05B /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
+		426ED51123585A8E000ED05B /* NoEmptyTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoEmptyTools.h; sourceTree = "<group>"; };
 		42E5338B2079A966001F714D /* 数据非空判断&数据转换.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "数据非空判断&数据转换.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E5338E2079A966001F714D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		42E5338F2079A966001F714D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,13 +95,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		421E0F992355737E001FD3C4 /* 1,为空判断 */ = {
+		421E0F992355737E001FD3C4 /* 2,空值判断 */ = {
 			isa = PBXGroup;
 			children = (
 				42E533C02079AA05001F714D /* MCDataJudge.h */,
 				42E533C12079AA05001F714D /* MCDataJudge.m */,
 			);
-			path = "1,为空判断";
+			path = "2,空值判断";
 			sourceTree = "<group>";
 		};
 		421E0F9A23557391001FD3C4 /* 3,返回安全值 */ = {
@@ -108,22 +113,32 @@
 			path = "3,返回安全值";
 			sourceTree = "<group>";
 		};
-		421E0F9B235573A2001FD3C4 /* 2,为空测试 */ = {
+		421E0F9B235573A2001FD3C4 /* 1,空值测试 */ = {
 			isa = PBXGroup;
 			children = (
 				42E533C92079FE76001F714D /* MCDataNull.h */,
 				42E533CA2079FE76001F714D /* MCDataNull.m */,
 			);
-			path = "2,为空测试";
+			path = "1,空值测试";
 			sourceTree = "<group>";
 		};
-		421E0F9C235573D8001FD3C4 /* 4,数据转换 */ = {
+		421E0F9C235573D8001FD3C4 /* 5,数据转换 */ = {
 			isa = PBXGroup;
 			children = (
 				42E533C32079AA1D001F714D /* MCDataConversion.h */,
 				42E533C42079AA1D001F714D /* MCDataConversion.m */,
 			);
-			path = "4,数据转换";
+			path = "5,数据转换";
+			sourceTree = "<group>";
+		};
+		426ED50E235858C8000ED05B /* 4，控制过滤 */ = {
+			isa = PBXGroup;
+			children = (
+				426ED51123585A8E000ED05B /* NoEmptyTools.h */,
+				426ED50F23585A8E000ED05B /* NoEmptyTools.m */,
+				426ED51023585A8E000ED05B /* NullSafe.m */,
+			);
+			path = "4，控制过滤";
 			sourceTree = "<group>";
 		};
 		42E533822079A966001F714D = {
@@ -153,10 +168,11 @@
 				42E5338F2079A966001F714D /* AppDelegate.m */,
 				42E533912079A966001F714D /* ViewController.h */,
 				42E533922079A966001F714D /* ViewController.m */,
-				421E0F992355737E001FD3C4 /* 1,为空判断 */,
-				421E0F9B235573A2001FD3C4 /* 2,为空测试 */,
+				421E0F9B235573A2001FD3C4 /* 1,空值测试 */,
+				421E0F992355737E001FD3C4 /* 2,空值判断 */,
 				421E0F9A23557391001FD3C4 /* 3,返回安全值 */,
-				421E0F9C235573D8001FD3C4 /* 4,数据转换 */,
+				426ED50E235858C8000ED05B /* 4，控制过滤 */,
+				421E0F9C235573D8001FD3C4 /* 5,数据转换 */,
 				42E533942079A966001F714D /* Main.storyboard */,
 				42E533972079A968001F714D /* Assets.xcassets */,
 				42E533992079A968001F714D /* LaunchScreen.storyboard */,
@@ -316,10 +332,12 @@
 			files = (
 				42E533932079A966001F714D /* ViewController.m in Sources */,
 				42E533C22079AA05001F714D /* MCDataJudge.m in Sources */,
+				426ED51323585A8F000ED05B /* NullSafe.m in Sources */,
 				42E533C52079AA1D001F714D /* MCDataConversion.m in Sources */,
 				42E533C82079AE4A001F714D /* MCDataSafety.m in Sources */,
 				42E533CB2079FE76001F714D /* MCDataNull.m in Sources */,
 				42E5339E2079A968001F714D /* main.m in Sources */,
+				426ED51223585A8F000ED05B /* NoEmptyTools.m in Sources */,
 				42E533902079A966001F714D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
